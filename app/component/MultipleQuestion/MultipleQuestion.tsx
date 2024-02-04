@@ -188,7 +188,7 @@ const MultipleChoicesComponent : React.FC<MultipleChoicesPropsInterface> = ({pro
                 </div>
                 <div className="w-full flex flex-col mb-4">
                 <h1 className="text-lg text-blue-600 md:text-xl font-bold mb-2">Result</h1>
-                <p className="text-black font-bold">Your Score is {Object.values(props.questionsInformation).filter(data=>data.response).length * 100/ Object.values(props.questionsInformation).length}</p>
+                <p className="text-black font-bold">Your Score is {Object.values(props.questionsInformation).filter(data=>data.status).length * 100/ Object.values(props.questionsInformation).length}</p>
                 </div>
                 {Object.keys(props.questionsInformation).map((key, index)=>{
                     return <div key={`${index}-finish-answer`} className="flex flex-col w-full">

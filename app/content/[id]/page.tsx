@@ -123,6 +123,9 @@ const ContentPage : React.FC<ContentPageProps> = ({currentSection, id}) => {
                         </div>
                     })}
                 </div>
+                <div className="flex flex-col w-full mb-2">
+                    {content.conclusion}
+                </div>
             </div>
         }
         {
