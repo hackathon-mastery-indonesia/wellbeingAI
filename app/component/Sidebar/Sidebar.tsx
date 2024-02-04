@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSidebar } from '../../context/SidebarContext';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-import { RiHome2Fill, RiSearch2Fill, RiBookFill, RiRobot2Fill, RiFileList2Fill, RiHeart2Fill, RiChatCheckFill, RiSearch2Line } from 'react-icons/ri';
+import { RiHome2Fill, RiSearch2Fill, RiBookFill, RiRobot2Fill, RiFileList2Fill, RiHeart2Fill, RiChatCheckFill, RiSearch2Line, RiRobot2Line } from 'react-icons/ri';
 import { useRouter, usePathname } from 'next/navigation';
 import { MdArticle, MdBook, MdPeople, MdPerson, MdQuiz, MdVideocam } from 'react-icons/md';
 import { AiOutlineRobot } from 'react-icons/ai';
@@ -42,7 +42,7 @@ const ArticleSidebar: React.FC<ArticleSidebarProps> = ({onSidebarChange}) => {
   
           <div className={`flex w-full ${isSidebarOpen? 'justify-between': 'justify-center'} items-center mb-4`}>
           {
-              isSidebarOpen && <h1 className=' text-white text-xl md:text-3xl font-bold whitespace-break-spaces break-words'>Healthsistant</h1>
+              isSidebarOpen && <a href='/' className=' text-white text-xl md:text-3xl font-bold whitespace-break-spaces break-words'>WellnessAI</a>
           }
           <div onClick={toggleSidebar} className='ml-2 text-white text-lg'>
               {
@@ -103,19 +103,14 @@ const Sidebar: React.FC = () => {
             icon: <RiHome2Fill title='Home' />
         },
         {
-            title: 'Search',
-            href: '/search',
-            icon: <RiSearch2Line title='Search' />
+            title: 'Prompt',
+            href: '/prompt',
+            icon: <RiRobot2Line title='prompt' />
         },
         {
             title: 'Health Module',
-            href: '/modul',
+            href: '/health-module',
             icon: <RiBookFill title='Health Module' />
-        },
-        {
-            title: 'Health Assistant',
-            href: '/assistant',
-            icon: <RiRobot2Fill title='Health Assistant' />
         },
      ];
   
@@ -132,7 +127,7 @@ const Sidebar: React.FC = () => {
 
         <div className={`flex w-full ${isSidebarOpen? 'justify-between': 'justify-center'} items-center mb-4`}>
         {
-            isSidebarOpen && <h1 className=' text-white text-xl md:text-3xl font-bold whitespace-break-spaces break-words'>Healthsistant</h1>
+            isSidebarOpen && <h1 className=' text-white text-xl md:text-3xl font-bold whitespace-break-spaces break-words'>WellnessAI</h1>
         }
         <div onClick={toggleSidebar} className='ml-2 text-white text-lg'>
             {

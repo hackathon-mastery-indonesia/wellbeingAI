@@ -30,7 +30,7 @@ const str3 = `
 CREATE TABLE ARTICLE(
   id BIGSERIAL NOT NULL,
   title TEXT NOT NULL,
-  html TEXT,
+  json TEXT,
   title_embedding vector NOT NULL,
   problem_embedding vector NOT NULL,
   categories_embedding vector NOT NULL,
@@ -153,7 +153,7 @@ CREATE TABLE ARTICLE_EMBEDDING(
 `
 
 const task = async () => {
-  const res = await query(`DELETE FROM ARTICLE;
+  const res = await query(`SELECT * FROM ARTICLE_EMBEDDING
   `)
   console.log(res)
 }

@@ -1,7 +1,6 @@
 'use client'
 
 import axios from "axios";
-import RecommendationEtiquetteBar from "./component/RecommendationEtiquetteBar/RecommendationEtiquetteBar";
 import SearchBar from "./component/SearchBar/SearchBar";
 import SidebarLayout from "./layout/SidebarLayout";
 import { useState } from "react";
@@ -9,11 +8,7 @@ import { useRouter, usePathname } from 'next/navigation';
 
 
 function Home() {
-  const situationEtiquette = [
-    'Etika Chat Dosen',
-    'Etika Menyampaikan Pendapat',
-    'Etika Berkunjung ke Rumah Orang Lain'
-  ]
+
   const [text,setText] = useState<string>('')
   const router = useRouter()
    
@@ -26,28 +21,26 @@ function Home() {
       <div className="w-full flex flex-col mt-8">
           <div className="w-full max-w-3xl mx-auto flex mb-4">
               <h1 className="text-center mx-auto  text-3xl font-bold text-black mb-4">
-                <span className="text-blue-500">EtiquetteAI: </span>Pemandu Etika dan Etiket yang Interaktif & Kolaboratif Pakai AI
+                <span className="text-blue-500">WellnessAI: </span>A Companion for a Healthier Physical and Mental Lifestyle through Collaborative AI.
               </h1>
             </div>
             
             <div className="flex flex-col max-w-3xl mx-auto">
             <p className="mx-auto text-black text-sm text-justify mb-2">
-            EtiquetteAI adalah platform yang menyediakan panduan komprehensif tentang etiket dalam berbagai situasi, tempat, dan daerah untuk masyarakat Indonesia. Kami tidak hanya berhenti di situ; EtiquetteAI dilengkapi dengan chatbot pembelajaran etiket, quiz studi kasus etiket, dan kemampuan untuk menganalisis etiket berdasarkan komentar di internet.
-            </p>
-            <p className="mx-auto text-black text-sm text-justify">
-            Dengan EtiquetteAI, Anda dapat menjelajahi panduan etiket yang relevan, mempraktikkannya dalam situasi sehari-hari, dan meningkatkan pemahaman Anda melalui interaksi dengan chatbot yang ramah dan uji pengetahuan yang menarik. Dengan fokus pada pembelajaran yang interaktif dan berdaya guna, Etiquette hadir untuk membantu Anda menciptakan budaya etika yang lebih baik dalam kehidupan sehari-hari. Bergabunglah dengan kami dan mulailah perjalanan Anda menuju perilaku yang lebih sopan dan sadar etika bersama Etiquette!
+            WellnessAI is a platform that provides a comprehensive guide to physical and mental health through collaboration with artificial intelligence. We dont stop there; WellnessAI is equipped with a virtual health learning assistant and interactive health case study quizzes.
+            </p><p className="mx-auto text-black text-sm text-justify">
+            With WellnessAI, you can explore relevant health guidelines and implement them in your daily life. With a focus on interactive and beneficial learning, WellnessAI is here to help you create an overall healthier lifestyle. Join us and start your journey towards better health with WellnessAI!
             </p>
             </div>
             <div className="w-full flex flex-col items-center  mt-6 max-w-3xl mx-auto">
                <h1 className="text-center mx-auto  text-3xl font-bold text-blue-400 mb-4">
-                <span className="text-black">Pelajari Etiket atau Etika yang Anda Cari dengan</span> Prompt
+                <span className="text-black">Learn the Health Guidelines You Want with</span> Prompt
               </h1>
                 <p className="mx-auto mb-2 text-black text-sm text-justify">
-                EtiquetteAI menggunakan kombinasi teknologi LLM, Text-to-Video, Text-to-Speech,  Speech-to-Text, dan Vector Similarity Search untuk membuat konten pembelajaran etika yang interaktif dan kolaboratif berdasarkan prompt yang diketikkan pengguna.
-                </p>
-                <button onClick={()=>{
-                  router.push('/cari')
-                }} className="text-white bg-blue-500 text-center px-4 py-2 font-bold text-sm md:text-base rounded-full">Mulai Prompt Sekarang</button>   
+                WellnessAI utilizes a combination of LLM technology and Vector Similarity Search to create interactive and collaborative health learning content based on user-entered prompts.
+                </p><button onClick={()=>{
+                  router.push('/prompt')
+                }} className="text-white bg-blue-500 text-center px-4 py-2 font-bold text-sm md:text-base rounded-full">Start Prompting Now</button>   
                 
             </div>
       </div>
